@@ -35,6 +35,9 @@ int main()
      myStack.clear();
 
     //============= Another way to display items , but this way clear stack ========
+    myStack.push(2);
+    myStack.push(3);
+    myStack.push(10);
     while(!myStack.isEmpty()){
         cout<<myStack.top()<<" ";
         myStack.pop();
