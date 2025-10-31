@@ -4,13 +4,31 @@
 
 class Stack
 {
+    private:
+    int next;
+    int length;
+    int myStack[100];//initial size
     public:
-        Stack();
+        Stack(int);
+
+        bool isFull();
+
+        bool isEmpty();
+
+        void push(int item);
+
+        void pop();
+
+        int top();
+
+        void display();
+
+        int getItemsNumber();
+
+        void clear();
+
         virtual ~Stack();
 
-    protected:
-
-    private:
 };
 
 #endif // STACK_H

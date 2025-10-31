@@ -1,0 +1,11 @@
+# depslib dependency file v1.0
+1761941866 source:c:\users\cs\documents\++c\.vscode\data structures demo\stack_arraybased_usingindex\src\stack.cpp
+	"Stack.h"
+	<iostream>
+
+1761940291 c:\users\cs\documents\++c\.vscode\data structures demo\stack_arraybased_usingindex\include\stack.h
+
+1761941746 source:c:\users\cs\documents\++c\.vscode\data structures demo\stack_arraybased_usingindex\main.cpp
+	<iostream>
+	"stack.h"
+
