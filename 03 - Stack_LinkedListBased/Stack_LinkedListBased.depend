@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1762367308 source:c:\users\cs\documents\++c\.vscode\data structures demo\01 - stack\stack_linkedlistbased\src\stack.cpp
+	"Stack.h"
+	<iostream>
+
+1762367308 c:\users\cs\documents\++c\.vscode\data structures demo\01 - stack\stack_linkedlistbased\include\stack.h
+

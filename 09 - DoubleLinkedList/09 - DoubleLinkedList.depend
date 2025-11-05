@@ -1,0 +1,11 @@
+# depslib dependency file v1.0
+1762385324 source:c:\users\cs\documents\++c\.vscode\data structures demo\09 - doublelinkedlist\main.cpp
+	<iostream>
+	"LinkedList.h"
+
+1762384875 source:c:\users\cs\documents\++c\.vscode\data structures demo\09 - doublelinkedlist\src\linkedlist.cpp
+	"LinkedList.h"
+	<iostream>
+
+1762383791 c:\users\cs\documents\++c\.vscode\data structures demo\09 - doublelinkedlist\include\linkedlist.h
+
