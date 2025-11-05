@@ -1,49 +1,44 @@
 #include <iostream>
-#include"stack.h"
+#include "Stack.h"
 using namespace std;
 
 int main()
 {
     int len;
-    cout<<"Enter stack length: ";
-    cin>>len;
+    cout << "Enter stack length: ";
+    cin >> len;
+
     Stack myStack(len);
 
-    //============== Push new items ===========
-    myStack.push(2);
-    myStack.push(3);
-    myStack.push(10);
-    myStack.push(4);
+    // ======== Push items ========
     myStack.push(5);
+    myStack.push(10);
+    myStack.push(15);
+    myStack.push(20);
 
-    //============== Pop item =================
+    // ======== Top element ========
+    cout << "Top element: " << myStack.top() << endl;
+
+    // ======== Pop one item ========
     myStack.pop();
 
-    //============= Display items =============
-    myStack.display();
+    // ======== Check if full ========
+    cout << (myStack.isFull() ? "Stack is full\n" : "Stack is not full\n");
 
-    //============= Top item ===================
-    myStack.top();
+    // ======== Check size ========
+    cout << "Current size: " << myStack.size() << endl;
 
-    //============ Check if stack is empty ======
-    myStack.isEmpty();
-
-    //============ Check if stack is Full =======
-     myStack.isFull();
-
-    //============ Clear stack ==================
-     myStack.clear();
-
-    //============= Another way to display items , but this way clear stack ========
-    myStack.push(2);
-    myStack.push(3);
-    myStack.push(10);
-    while(!myStack.isEmpty()){
-        cout<<myStack.top()<<" ";
+    // ======== Display all items (from top to bottom) ========
+    cout << "Items in stack (from top to bottom): ";
+    while (!myStack.isEmpty())
+    {
+        cout << myStack.top() << " ";
         myStack.pop();
     }
+    cout << endl;
 
-
+    // ======== Check if empty ========
+    cout << (myStack.isEmpty() ? "Stack is empty\n" : "Stack is not empty\n");
 
     return 0;
 }

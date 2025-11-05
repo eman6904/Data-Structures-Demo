@@ -1,70 +1,77 @@
 #include "Stack.h"
-#include<iostream>
+#include <iostream>
 using namespace std;
-Stack::Stack(int length):next(0),length(length)
+
+//================== Constructor ==================
+// Initializes an empty stack (next points to 0)
+Stack::Stack() : next(0)
 {
-    myStack[length];
 }
 
+//================== Check if Empty ==================
+// Returns true if the stack has no elements
 bool Stack::isEmpty()
 {
-
     return next == 0;
 }
+
+//================== Check if Full ==================
+// Returns true if the stack reached its maximum capacity
 bool Stack::isFull()
 {
-
     return next == length;
 }
+
+//================== Push ==================
+// Adds a new item to the top of the stack
 void Stack::push(int item)
 {
-
-    if(!isFull())
-        myStack[next] = item,next++;
+    if (!isFull())
+        myStack[next] = item, next++;
     else
-        cout<<"stack is full!\n";
+        cout << "Stack is full!\n";
 }
+
+//================== Pop ==================
+// Removes the top item from the stack
 void Stack::pop()
 {
-
-    if(!isEmpty())
+    if (!isEmpty())
         next--;
     else
-        cout<<"stack is empty!\n";
+        cout << "Stack is empty!\n";
 }
-int Stack::getItemsNumber()
+
+//================== Size ==================
+// Returns the current number of elements in the stack
+int Stack::size()
 {
     return next;
 }
+
+//================== Top ==================
+// Returns the top item without removing it
 int Stack::top()
 {
-    if(!isEmpty())
-        return myStack[next-1];
+    if (!isEmpty())
+        return myStack[next - 1];
     else
-        cout<<"stack is empty!\n";
-}
-
-void Stack::display()
-{
-    if(isEmpty()){
-        cout<<"stack is empty!\n";
-        return;
-    }
-    int index = next - 1;
-    while(index>=0)
     {
-        cout<<myStack[index]<<" ";
-
-        index--;
+        cout << "Stack is empty!\n";
+        return -1;
     }
 }
 
-void Stack::clear(){
-
+//================== Clear ==================
+// Removes all elements from the stack
+void Stack::clear()
+{
     next = 0;
 }
 
+//================== Destructor ==================
+// Destructor (not used because we don’t allocate dynamic memory)
 Stack::~Stack()
 {
-    //dtor
+    // dtor
 }

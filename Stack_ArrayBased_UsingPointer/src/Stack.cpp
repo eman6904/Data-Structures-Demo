@@ -2,53 +2,60 @@
 #include <iostream>
 using namespace std;
 
+// Constructor: initializes stack with given length
 Stack::Stack(int length) : length(length)
 {
-    myStack = new int[length];
-    nextPtr = myStack;
+    myStack = new int[length];  // dynamically allocate array
+    nextPtr = myStack;          // points to the first free position
 }
 
+// Check if stack is empty
 bool Stack::isEmpty()
 {
     return nextPtr == myStack;
 }
 
+// Check if stack is full
 bool Stack::isFull()
 {
     return nextPtr == myStack + length;
 }
 
+// Push new item on top of stack
 void Stack::push(int item)
 {
     if (isFull())
         cout << "Stack is full!\n";
     else
     {
-        *nextPtr = item;
-        nextPtr++;
+        *nextPtr = item;  // store item in current position
+        nextPtr++;        // move pointer to next position
     }
 }
 
+// Pop item from top of stack
 void Stack::pop()
 {
     if (!isEmpty())
-        nextPtr--;
+        nextPtr--;  // just move pointer back (no need to delete)
     else
         cout << "Stack is empty!\n";
 }
 
-int Stack::getItemsNumber()
+// Return number of items in stack
+int Stack::size()
 {
     return nextPtr - myStack;
 }
 
+// Return top item without removing it
 int Stack::top()
 {
     if (!isEmpty())
     {
         auto currPtr = nextPtr;
-        currPtr--;
-        return *currPtr;
+        currPtr--;          // move to last inserted element
+        return *currPtr;    // return its value
     }
     else
     {
@@ -57,29 +64,13 @@ int Stack::top()
     }
 }
 
-void Stack::display()
-{
-    if (isEmpty())
-    {
-        cout << "Stack is empty!\n";
-        return;
-    }
-
-    auto currPtr = nextPtr;
-    cout << "Stack elements: ";
-    while (currPtr != myStack)
-    {
-        currPtr--;
-        cout << *currPtr << " ";
-    }
-    cout << endl;
-}
-
+// Clear stack (remove all items)
 void Stack::clear()
 {
-    nextPtr = myStack;
+    nextPtr = myStack;  // reset pointer to beginning
 }
 
+// Destructor: free allocated memory
 Stack::~Stack()
 {
     delete[] myStack;

@@ -1,11 +1,11 @@
 # depslib dependency file v1.0
-1761945573 source:c:\users\cs\documents\++c\.vscode\data structures demo\stack_arraybased_usingpointer\main.cpp
+1762285233 source:c:\users\cs\documents\++c\.vscode\data structures demo\stack_arraybased_usingpointer\main.cpp
 	<iostream>
-	"stack.h"
+	"Stack.h"
 
-1761945854 source:c:\users\cs\documents\++c\.vscode\data structures demo\stack_arraybased_usingpointer\src\stack.cpp
+1762285262 source:c:\users\cs\documents\++c\.vscode\data structures demo\stack_arraybased_usingpointer\src\stack.cpp
 	"Stack.h"
 	<iostream>
 
-1761945900 c:\users\cs\documents\++c\.vscode\data structures demo\stack_arraybased_usingpointer\include\stack.h
+1762287564 c:\users\cs\documents\++c\.vscode\data structures demo\stack_arraybased_usingpointer\include\stack.h
 

@@ -1,34 +1,31 @@
 #ifndef STACK_H
 #define STACK_H
 
-
 class Stack
 {
-    private:
-    int *nextPtr;
-    int length;
-    int *myStack;
-    public:
-        Stack(int);
+private:
+    int* nextPtr;   // Pointer to the next available position
+    int length;     // Maximum size of the stack
+    int* myStack;   // Pointer to the stack array
 
-        bool isFull();
+public:
+    Stack(int size);    // Constructor
 
-        bool isEmpty();
+    bool isFull();      // Check if the stack is full
 
-        void push(int item);
+    bool isEmpty();     // Check if the stack is empty
 
-        void pop();
+    void push(int item); // Add an item to the top
 
-        int top();
+    void pop();          // Remove the top item
 
-        void display();
+    int top();           // Get the top item without removing it
 
-        int getItemsNumber();
+    int size();          // Get the number of elements
 
-        void clear();
+    void clear();        // Clear all elements
 
-        virtual ~Stack();
-
+    virtual ~Stack();    // Destructor
 };
 
 #endif // STACK_H
