@@ -1,19 +1,20 @@
 #ifndef QUEUE_H
 #define QUEUE_H
-
+#include <iostream>
+using namespace std;
 // Simple linked-list based queue (declaration only).
 // Node and Queue classes are declared here.
 
 class Node {
 public:
-    int data;
+    pair<string,string> data;
     Node* next;
 };
 
 class Queue {
 private:
     // helper: insert first node when queue is empty
-    void insertFirst(int newValue);
+    void insertFirst(pair<string,string> newValue);
      Node* head;
 
 public:
@@ -24,11 +25,11 @@ public:
 
     bool isNotEmpty();
 
-    void push(int newValue);
+    void push(pair<string,string> newValue);
 
     void pop();
 
-    int front();
+    pair<string,string> front();
 
     int size();
 

@@ -4,29 +4,29 @@
 class Queue
 {
 private:
-    int* last_element;   // Pointer to the position after the last element
-    int* first_element;  // Pointer to the first element
-    int sz;              // Queue capacity
-    int* myQueue;        // Pointer to array of elements
+    int* last_element;
+    int* first_element;
+    int sz;
+    int* myQueue;
 
 public:
-    Queue(int);          // Constructor (takes queue size)
+    Queue(int);
 
-    bool isEmpty();      // Check if queue is empty
+    bool isEmpty();
 
-    bool isFull();       // Check if queue is full
+    bool isFull();
 
-    void push(int);      // Add item to queue
+    void push(int);
 
-    int front();         // Get the front item without removing it
+    int front();
 
-    void pop();          // Remove front item
+    void pop();
 
-    void clear();        // Reset the queue
+    void clear();
 
-    int size();          // Return current number of items
+    int size();
 
-    virtual ~Queue();    // Destructor
+    virtual ~Queue();
 };
 
 #endif // QUEUE_H

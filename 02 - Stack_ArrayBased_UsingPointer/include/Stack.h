@@ -4,28 +4,28 @@
 class Stack
 {
 private:
-    int* nextPtr;   // Pointer to the next available position
-    int length;     // Maximum size of the stack
-    int* myStack;   // Pointer to the stack array
+    int* nextPtr;
+    int length;
+    int* myStack;
 
 public:
-    Stack(int size);    // Constructor
+    Stack(int size);
 
-    bool isFull();      // Check if the stack is full
+    bool isFull();
 
-    bool isEmpty();     // Check if the stack is empty
+    bool isEmpty();
 
-    void push(int item); // Add an item to the top
+    void push(int item);
 
-    void pop();          // Remove the top item
+    void pop();
 
-    int top();           // Get the top item without removing it
+    int top();
 
-    int size();          // Get the number of elements
+    int size();
 
-    void clear();        // Clear all elements
+    void clear();
 
-    virtual ~Stack();    // Destructor
+    virtual ~Stack();
 };
 
 #endif // STACK_H

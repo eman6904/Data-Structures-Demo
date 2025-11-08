@@ -1,0 +1,12 @@
+# depslib dependency file v1.0
+1762640988 source:c:\users\cs\documents\++c\.vscode\data structures demo\09 - callcenter_queueapplication\main.cpp
+	<iostream>
+	"Queue.h"
+
+1762641317 source:c:\users\cs\documents\++c\.vscode\data structures demo\09 - callcenter_queueapplication\src\queue.cpp
+	"Queue.h"
+	<iostream>
+
+1762641115 c:\users\cs\documents\++c\.vscode\data structures demo\09 - callcenter_queueapplication\include\queue.h
+	<iostream>
+

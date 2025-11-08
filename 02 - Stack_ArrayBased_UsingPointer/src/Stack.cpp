@@ -28,8 +28,8 @@ void Stack::push(int item)
         cout << "Stack is full!\n";
     else
     {
-        *nextPtr = item;  // store item in current position
-        nextPtr++;        // move pointer to next position
+        *nextPtr = item;
+        nextPtr++;
     }
 }
 
@@ -54,8 +54,8 @@ int Stack::top()
     if (!isEmpty())
     {
         auto currPtr = nextPtr;
-        currPtr--;          // move to last inserted element
-        return *currPtr;    // return its value
+        currPtr--;
+        return *currPtr;
     }
     else
     {
@@ -67,7 +67,7 @@ int Stack::top()
 // Clear stack (remove all items)
 void Stack::clear()
 {
-    nextPtr = myStack;  // reset pointer to beginning
+    nextPtr = myStack;
 }
 
 // Destructor: free allocated memory

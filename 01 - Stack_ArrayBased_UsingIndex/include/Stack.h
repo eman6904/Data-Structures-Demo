@@ -4,23 +4,28 @@
 class Stack
 {
 private:
-    int next;            // index of next free position (also represents stack size)
-    static const int length = 100;  // max stack size
-    int myStack[length]; // fixed-size array for stack elements
+    int next;
+    static const int length = 100;
+    int myStack[length];
 
 public:
-    Stack();             // constructor
+    Stack();
 
-    bool isFull();       // check if stack is full
-    bool isEmpty();      // check if stack is empty
+    bool isFull();
 
-    void push(int item); // add element
-    void pop();          // remove top element
-    int top();           // get top element
-    int size();          // get current size
-    void clear();        // empty the stack
+    bool isEmpty();
 
-    virtual ~Stack();    // destructor
+    void push(int item);
+
+    void pop();
+
+    int top();
+
+    int size();
+
+    void clear();
+
+    virtual ~Stack();
 };
 
 #endif // STACK_H

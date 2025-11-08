@@ -4,29 +4,29 @@
 class Queue
 {
 private:
-    int last_element;          // Index of the next free position
-    int first_element;         // Index of the current front element
-    static const int sz = 100; // Maximum queue capacity
-    int myQueue[sz];           // Fixed-size array to store queue elements
+    int last_element;
+    int first_element;
+    static const int sz = 100;
+    int myQueue[sz];
 
 public:
-    Queue();        // Constructor to initialize indices
+    Queue();
 
-    bool isEmpty(); // Check if queue is empty
+    bool isEmpty();
 
-    bool isFull();  // Check if queue is full
+    bool isFull();
 
-    void push(int); // Add item to queue
+    void push(int);
 
-    int front();    // Get the front item without removing it
+    int front();
 
-    void pop();     // Remove the front item
+    void pop();
 
-    void clear();   // Reset the queue
+    void clear();
 
-    int size();     // Return the number of items in the queue
+    int size();
 
-    virtual ~Queue(); // Destructor
+    virtual ~Queue();
 };
 
 #endif // QUEUE_H
