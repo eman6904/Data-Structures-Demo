@@ -1,10 +1,11 @@
 #ifndef STACK_H
 #define STACK_H
-
+#include<iostream>
+using namespace std;
 // Simple stack implemented using a linked list
 class Node {
 public:
-    int data;
+    string data;
     Node* next;
 };
 
@@ -19,11 +20,11 @@ public:
 
     bool isNotEmpty();
 
-    void push(int newValue);
+    void push(string newValue);
 
     void pop();
 
-    int top();
+    string top();
 
     int size();
 

@@ -1,0 +1,12 @@
+# depslib dependency file v1.0
+1762638416 source:c:\users\cs\documents\++c\.vscode\data structures demo\redo - system - stackapplication\04 - undo\src\stack.cpp
+	"Stack.h"
+	<iostream>
+
+1762637747 c:\users\cs\documents\++c\.vscode\data structures demo\redo - system - stackapplication\04 - undo\include\stack.h
+	<iostream>
+
+1762638377 source:c:\users\cs\documents\++c\.vscode\data structures demo\redo - system - stackapplication\04 - undo\main.cpp
+	<iostream>
+	<Stack.h>
+

@@ -22,8 +22,8 @@ void Stack::push(int newValue) {
     Node* newNode = new Node();
     newNode->data = newValue;
 
-    newNode->next = head; // link new node to current top
-    head = newNode;       // move head to new node
+    newNode->next = head;
+    head = newNode;
 }
 
 // Pop: remove element from the top
