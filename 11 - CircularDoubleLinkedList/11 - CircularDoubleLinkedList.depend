@@ -1,0 +1,11 @@
+# depslib dependency file v1.0
+1762602419 source:c:\users\cs\documents\++c\.vscode\data structures demo\11 - circulardoublelinkedlist\main.cpp
+	<iostream>
+	"LinkedList.h"
+
+1762601921 c:\users\cs\documents\++c\.vscode\data structures demo\11 - circulardoublelinkedlist\include\linkedlist.h
+
+1762602384 source:c:\users\cs\documents\++c\.vscode\data structures demo\11 - circulardoublelinkedlist\src\linkedlist.cpp
+	"LinkedList.h"
+	<iostream>
+
