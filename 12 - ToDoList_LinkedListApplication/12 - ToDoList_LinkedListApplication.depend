@@ -1,0 +1,21 @@
+# depslib dependency file v1.0
+1762618748 source:c:\users\cs\documents\++c\.vscode\data structures demo\12 - todolist_linkedlistapplication\src\linkedlist.cpp
+	"LinkedList.h"
+	<iostream>
+	<vector>
+
+1762617817 c:\users\cs\documents\++c\.vscode\data structures demo\12 - todolist_linkedlistapplication\include\linkedlist.h
+	"Task.h"
+	<vector>
+
+1762618120 source:c:\users\cs\documents\++c\.vscode\data structures demo\12 - todolist_linkedlistapplication\main.cpp
+	<iostream>
+	"LinkedList.h"
+	"Task.h"
+
+1762618748 c:\users\cs\documents\++c\.vscode\data structures demo\12 - todolist_linkedlistapplication\include\task.h
+	<iostream>
+
+1762618748 source:c:\users\cs\documents\++c\.vscode\data structures demo\12 - todolist_linkedlistapplication\src\task.cpp
+	"Task.h"
+
