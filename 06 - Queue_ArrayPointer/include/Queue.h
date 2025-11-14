@@ -4,8 +4,8 @@
 class Queue
 {
 private:
-    int* last_element;
-    int* first_element;
+    int* rearItem;
+    int* frontItem;
     int sz;
     int* myQueue;
 
@@ -16,11 +16,11 @@ public:
 
     bool isFull();
 
-    void push(int);
+    void enqueue(int);
 
     int front();
 
-    void pop();
+    void dequeue();
 
     void clear();
 

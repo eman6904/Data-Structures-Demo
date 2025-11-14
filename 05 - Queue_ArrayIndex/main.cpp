@@ -7,17 +7,17 @@ int main()
     Queue myQueue;
 
     //============== Push new items ==============
-    myQueue.push(10);
-    myQueue.push(20);
-    myQueue.push(30);
-    myQueue.push(40);
-    myQueue.push(50);
+    myQueue.enqueue(10);
+    myQueue.enqueue(20);
+    myQueue.enqueue(30);
+    myQueue.enqueue(40);
+    myQueue.enqueue(50);
 
     //============== Display front ===============
     cout << "Front item: " << myQueue.front() << endl;
 
     //============== Pop item ====================
-    myQueue.pop();
+    myQueue.dequeue();
     cout << "Front after one pop: " << myQueue.front() << endl;
 
     //============== Check if queue is empty =====
@@ -40,16 +40,16 @@ int main()
     cout << "Queue cleared.\n";
 
     //============== Try adding new items again ===
-    myQueue.push(100);
-    myQueue.push(200);
-    myQueue.push(300);
+    myQueue.enqueue(100);
+    myQueue.enqueue(200);
+    myQueue.enqueue(300);
 
     //============== Display all items ============
     cout << "Items in queue: ";
     while (!myQueue.isEmpty())
     {
         cout << myQueue.front() << " ";
-        myQueue.pop();
+        myQueue.dequeue();
     }
     cout << endl;
 

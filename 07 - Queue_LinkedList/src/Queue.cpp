@@ -26,7 +26,7 @@ bool Queue::isNotEmpty() {
 }
 
 // Push: add element to the end of the queue
-void Queue::push(int newValue) {
+void Queue::enqueue(int newValue) {
     if (isEmpty()) {
         insertFirst(newValue);
         return;
@@ -45,7 +45,7 @@ void Queue::push(int newValue) {
 }
 
 // Pop: remove element from the front
-void Queue::pop() {
+void Queue::dequeue() {
     if (head == nullptr) {
         // queue already empty
         cout << "Queue is already empty\n";

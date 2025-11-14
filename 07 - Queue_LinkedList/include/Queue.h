@@ -24,9 +24,9 @@ public:
 
     bool isNotEmpty();
 
-    void push(int newValue);
+    void enqueue(int newValue);
 
-    void pop();
+    void dequeue();
 
     int front();
 

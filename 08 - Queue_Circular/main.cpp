@@ -5,22 +5,22 @@ using namespace std;
 int main() {
     Queue q;
     cout << "Added elements: 10, 20, 30, 40\n";
-    q.push(10);
-    q.push(20);
-    q.push(30);
-    q.push(40);
+    q.enqueue(10);
+    q.enqueue(20);
+    q.enqueue(30);
+    q.enqueue(40);
 
     cout << "Front element: " << q.front() << endl;
 
     cout << "pop two elements...\n";
-    q.pop();
-    q.pop();
+    q.dequeue();
+    q.dequeue();
 
     cout << "Front element now: " << q.front() << endl;
 
     cout << "Add more elements: 50, 60\n";
-    q.push(50);
-    q.push(60);
+    q.enqueue(50);
+    q.enqueue(60);
 
     if (q.isFull())
         cout << "Queue is full now!\n";
@@ -30,7 +30,7 @@ int main() {
     cout << "Elements in queue: ";
     while (!q.isEmpty()) {
         cout << q.front() << " ";
-        q.pop();
+        q.dequeue();
     }
     cout << endl;
 

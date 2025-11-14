@@ -4,7 +4,7 @@ using namespace std;
 
 //================== Constructor ==================
 // Initializes an empty queue (both pointers at 0)
-Queue::Queue() : last_element(-1), first_element(-1)
+Queue::Queue() : rearItem(-1), frontItem(-1)
 {
 }
 
@@ -12,29 +12,29 @@ Queue::Queue() : last_element(-1), first_element(-1)
 // Returns true if the queue has no elements
 bool Queue::isEmpty()
 {
-    return first_element == -1;
+    return frontItem == -1;
 }
 
 //================== Check if Full ==================
 // Returns true if the queue reached its maximum size
 bool Queue::isFull()
 {
-    return (last_element+1)%sz == first_element;
+    return (rearItem+1)%sz == frontItem;
 }
 
 //================== Push ==================
 // Adds a new item to the end of the queue
-void Queue::push(int item)
+void Queue::enqueue(int item)
 {
     if (isFull())
         cout << "Queue is full!\n";
     else
     {
-        if(first_element==-1)
-            first_element++;
-        last_element++;
-        last_element%=sz;
-        myQueue[last_element] = item;
+        if(frontItem==-1)
+            frontItem++;
+        rearItem++;
+        rearItem%=sz;
+        myQueue[rearItem] = item;
 
     }
 }
@@ -48,7 +48,7 @@ int Queue::front()
         cout << "Queue is empty!\n";
         return -1;
     }
-    return myQueue[first_element];
+    return myQueue[frontItem];
 }
 
 //================== Size ==================
@@ -57,20 +57,20 @@ int Queue::size()
 {
      if (isEmpty())
         return 0;
-    return (sz + last_element - first_element + 1) % sz;
+    return (sz + rearItem - frontItem + 1) % sz;
 }
 
 //================== Pop ==================
 // Removes the first item from the queue
-void Queue::pop()
+void Queue::dequeue()
 {
     if (isEmpty())
         cout << "Queue is empty!\n";
     else{
-         if(first_element==last_element)
-           first_element = -1,last_element = -1;
+         if(frontItem==rearItem)
+           frontItem = -1,rearItem = -1;
     else
-        first_element++,first_element%=sz;
+        frontItem++,frontItem%=sz;
     }
 }
 
@@ -78,8 +78,8 @@ void Queue::pop()
 // Removes all elements and resets the queue
 void Queue::clear()
 {
-    last_element = -1;
-    first_element = -1;
+    rearItem = -1;
+    frontItem = -1;
 }
 
 //================== Destructor ==================

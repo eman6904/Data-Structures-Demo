@@ -11,16 +11,16 @@ int main()
     Queue myQueue(len);
 
     // ======== Push items ========
-    myQueue.push(5);
-    myQueue.push(10);
-    myQueue.push(15);
-    myQueue.push(20);
+    myQueue.enqueue(5);
+    myQueue.enqueue(10);
+    myQueue.enqueue(15);
+    myQueue.enqueue(20);
 
     // ======== Show front item ========
     cout << "Front element: " << myQueue.front() << endl;
 
     // ======== Pop one item ========
-    myQueue.pop();
+    myQueue.dequeue();
     cout << "After one pop, front element: " << myQueue.front() << endl;
 
     // ======== Check if full ========
@@ -34,7 +34,7 @@ int main()
     while (!myQueue.isEmpty())
     {
         cout << myQueue.front() << " ";
-        myQueue.pop();
+        myQueue.dequeue();
     }
     cout << endl;
 

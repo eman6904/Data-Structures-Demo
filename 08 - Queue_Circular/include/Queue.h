@@ -4,8 +4,8 @@
 class Queue
 {
 private:
-    int last_element;
-    int first_element;
+    int rearItem;
+    int frontItem;
     static const int sz = 10;
     int myQueue[sz];
 
@@ -15,11 +15,11 @@ public:
     bool isEmpty();
     bool isFull();
 
-    void push(int);
+    void enqueue(int);
 
     int front();
 
-    void pop();
+    void dequeue();
 
     void clear();
 

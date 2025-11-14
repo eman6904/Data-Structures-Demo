@@ -4,7 +4,7 @@ using namespace std;
 
 //================== Constructor ==================
 // Initializes an empty queue (both pointers at 0)
-Queue::Queue() : last_element(0), first_element(0)
+Queue::Queue() : rearItem(0), frontItem(0)
 {
 }
 
@@ -12,26 +12,26 @@ Queue::Queue() : last_element(0), first_element(0)
 // Returns true if the queue has no elements
 bool Queue::isEmpty()
 {
-    return first_element == last_element;
+    return frontItem == rearItem;
 }
 
 //================== Check if Full ==================
 // Returns true if the queue reached its maximum size
 bool Queue::isFull()
 {
-    return last_element == sz;
+    return rearItem == sz;
 }
 
 //================== Push ==================
 // Adds a new item to the end of the queue
-void Queue::push(int item)
+void Queue::enqueue(int item)
 {
     if (isFull())
         cout << "Queue is full!\n";
     else
     {
-        myQueue[last_element] = item;
-        last_element++;
+        myQueue[rearItem] = item;
+        rearItem++;
     }
 }
 
@@ -44,32 +44,32 @@ int Queue::front()
         cout << "Queue is empty!\n";
         return -1;
     }
-    return myQueue[first_element];
+    return myQueue[frontItem];
 }
 
 //================== Size ==================
 // Returns the number of items currently in the queue
 int Queue::size()
 {
-    return last_element - first_element;
+    return rearItem - frontItem;
 }
 
 //================== Pop ==================
 // Removes the first item from the queue
-void Queue::pop()
+void Queue::dequeue()
 {
     if (isEmpty())
         cout << "Queue is empty!\n";
     else
-        first_element++;
+        frontItem++;
 }
 
 //================== Clear ==================
 // Removes all elements and resets the queue
 void Queue::clear()
 {
-    last_element = 0;
-    first_element = 0;
+    rearItem = 0;
+    frontItem = 0;
 }
 
 //================== Destructor ==================
